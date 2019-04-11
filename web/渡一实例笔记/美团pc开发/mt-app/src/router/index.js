@@ -9,6 +9,7 @@ import ChangeCity from '@/page/changeCity.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

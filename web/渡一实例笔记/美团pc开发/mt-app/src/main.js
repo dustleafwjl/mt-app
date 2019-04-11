@@ -9,6 +9,14 @@ import '@/assets/css/main.css'
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
+// 注册一个全局自定义指令 `v-focus`
+Vue.directive('document-click', {
+  // 当被绑定的元素插入到 DOM 中时……
+  bind: function (el, binding, vnode) {
+    // 聚焦元素
+    document.addEventListener('click', binding.value, false);
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({
